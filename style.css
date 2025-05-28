@@ -6,6 +6,12 @@
   --text: #1f2403;
 }
 
+:root[data-theme='dark'] {
+  --background-primary: #132221;
+  --background-secondary: #476462;
+  --text: #e1e1e1;
+}
+
 /* ZÁKLADNÍ STYLY */
 
 *,
@@ -185,7 +191,75 @@ span {
 
 /* SEM ZAČNĚTE PSÁT SVÉ STYLY PRO MOBIL */
 
+body,
+a {
+  font-family: 'Alegreya Sans', sans-serif;
+  color: var(--text);
+}
+
+.pitch {
+  font-family: 'Lora', sans-serif;
+  text-align: center;
+  background-color: var(--background-secondary);
+}
+
+.logo {
+  font-family: Dawning of a New Day;
+  font-style: cursive;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--background-secondary);
+}
+
+.subheading,
+.review {
+  background-color: var(--background-primary);
+}
+
+.pricelist,
+.footer {
+  background-color: var(--background-secondary);
+}
+
+.subheading {
+  text-align: center;
+}
+
+.subheading__content {
+  max-width: 800px;
+}
+
+.intro-image {
+  width: 100%;
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  background-image: url('./images/arnica-intro.jpg');
+}
+
+.offer {
+  width: 80%;
+  max-width: 270px;
+}
+
+.offer__price {
+  font-style: italic;
+}
+
+.review__text {
+  font-style: oblique;
+  border: 2px solid var(--background-secondary);
+}
+
+.footer {
+  font-style: italic;
+}
+
 @media (min-width: 840px) {
+
   /* HLAVIČKA - NAVIGACE */
   .page-header {
     padding: 2rem 4rem;
@@ -221,4 +295,52 @@ span {
   }
 
   /* TADY PIŠTE STYLY PRO ŠÍŘKU NAD 800PX */
+
+  .pricelist__content {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .offer {
+    width: 220px;
+  }
+
+  .review__photo {
+    background-image: url('./images/reviewer.jpg');
+    width: 300px;
+    height: 400px;
+    background-size: cover;
+  }
+
+
+  .review__text {
+    position: relative;
+    top: 50%;
+    left: 60px;
+    width: 250px;
+    background-color: var(--background-secondary);
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .pricelist__content {
+    gap: 6rem;
+  }
+
+  .footer {
+    gap: 6rem;
+  }
+
 }
